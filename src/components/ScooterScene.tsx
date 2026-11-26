@@ -2,22 +2,22 @@
 
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useMemo } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { PCFShadowMap } from "three";
 import type { SceneProps } from "@/core/scene";
 import { SceneErrorBoundary } from "./SceneErrorBoundary";
 import { solveScooterRig } from "@/sports/scooter/geometry";
 import {
-  BarsMesh,
-  ClampMesh,
-  DeckMesh,
-  ForkMesh,
-  GripTapeMesh,
-  GripsMesh,
-  HeadsetMesh,
-  HeadtubeMesh,
-  WheelMesh,
-} from "@/sports/scooter/meshes";
+  BarsTemplate,
+  ClampTemplate,
+  DeckTemplate,
+  ForkTemplate,
+  GripTapeTemplate,
+  GripsTemplate,
+  HeadsetTemplate,
+  HeadtubeTemplate,
+  WheelTemplate,
+} from "@/sports/scooter/templates";
 import type { ScooterCategory, ScooterPart } from "@/sports/scooter/types";
 
 type Props = SceneProps<ScooterCategory, ScooterPart>;
@@ -42,10 +42,10 @@ function ScooterAssembly({ build, activeCategory, onSelectCategory }: Props) {
   return (
     <group name="root" position={[rig.centerOffsetX, rig.wheelRadius, 0]}>
       <group name="chassis" rotation={[0, 0, rig.pitch]}>
-        {deck && <DeckMesh part={deck} {...common} highlight={hl("deck")} />}
-        {griptape && deck && <GripTapeMesh part={griptape} {...common} highlight={hl("griptape")} />}
+        {deck && <DeckTemplate part={deck} {...common} highlight={hl("deck")} />}
+        {griptape && deck && <GripTapeTemplate part={griptape} {...common} highlight={hl("griptape")} />}
         <group name="mount_rear_axle">
-          {wheels && <WheelMesh part={wheels} axle={deck?.compatibility.axle} {...common} highlight={hl("wheels")} />}
+          {wheels && <WheelTemplate part={wheels} axle={deck?.compatibility.axle} {...common} highlight={hl("wheels")} />}
         </group>
 
         <group
@@ -53,27 +53,36 @@ function ScooterAssembly({ build, activeCategory, onSelectCategory }: Props) {
           position={[rig.headtubeBase[0], rig.headtubeBase[1], 0]}
           rotation={[0, 0, rig.steeringTilt]}
         >
-          {deck && <HeadtubeMesh part={deck} {...common} highlight={hl("deck")} />}
-          {headset && <HeadsetMesh part={headset} {...common} highlight={hl("headset")} />}
-          {fork && <ForkMesh part={fork} {...common} highlight={hl("fork")} />}
+          {deck && <HeadtubeTemplate part={deck} {...common} highlight={hl("deck")} />}
+          {headset && <HeadsetTemplate part={headset} {...common} highlight={hl("headset")} />}
+          {fork && <ForkTemplate part={fork} {...common} highlight={hl("fork")} />}
           <group name="mount_front_axle" position={[0, rig.frontAxleY, 0]} rotation={[0, 0, -rig.steeringTilt - rig.pitch]}>
-            {wheels && fork && <WheelMesh part={wheels} axle={fork.compatibility.axle} {...common} highlight={hl("wheels")} />}
+            {wheels && fork && <WheelTemplate part={wheels} axle={fork.compatibility.axle} {...common} highlight={hl("wheels")} />}
           </group>
-          {clamp && <ClampMesh part={clamp} {...common} highlight={hl("clamp")} />}
-          {bars && <BarsMesh part={bars} {...common} highlight={hl("bars")} />}
-          {grips && bars && <GripsMesh part={grips} bars={bars} {...common} highlight={hl("grips")} />}
+          {clamp && <ClampTemplate part={clamp} {...common} highlight={hl("clamp")} />}
+          {bars && <BarsTemplate part={bars} {...common} highlight={hl("bars")} />}
+          {grips && bars && <GripsTemplate part={grips} bars={bars} {...common} highlight={hl("grips")} />}
         </group>
       </group>
     </group>
   );
 }
 
+/** Optional `?cam=px,py,pz,tx,ty,tz` (metres) — for screenshots, docs and visual QA. */
+function cameraFromUrl() {
+  const raw = new URLSearchParams(window.location.search).get("cam");
+  const v = raw?.split(",").map(Number);
+  if (!v || v.length !== 6 || v.some(Number.isNaN)) return null;
+  return { position: v.slice(0, 3) as [number, number, number], target: v.slice(3) as [number, number, number] };
+}
+
 export default function ScooterScene(props: Props) {
+  const [cam] = useState(cameraFromUrl);
   return (
     <Canvas
       shadows={{ type: PCFShadowMap }}
       dpr={[1, 2]}
-      camera={{ position: [1.5, 0.95, 1.85], fov: 30, near: 0.01, far: 50 }}
+      camera={{ position: cam?.position ?? [1.5, 0.95, 1.85], fov: 30, near: 0.01, far: 50 }}
       gl={{ antialias: true, preserveDrawingBuffer: true }}
       onPointerMissed={() => (document.body.style.cursor = "")}
     >
@@ -112,9 +121,9 @@ export default function ScooterScene(props: Props) {
 
       <OrbitControls
         makeDefault
-        target={[0, 0.4, 0]}
+        target={cam?.target ?? [0, 0.4, 0]}
         enableDamping
-        minDistance={0.6}
+        minDistance={0.25}
         maxDistance={3.5}
         maxPolarAngle={Math.PI / 2 - 0.04}
       />

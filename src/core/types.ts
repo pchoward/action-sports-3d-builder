@@ -16,6 +16,17 @@ export interface RetailerOffer {
   isShredDeal?: boolean;
 }
 
+/**
+ * 2D images for a part. All images are WebP (enforced by validateImages) —
+ * convert anything else with `npm run images`.
+ */
+export interface PartImages {
+  /** Product photo used for thumbnails in the selector and parts list. */
+  product?: string;
+  /** Flat print artwork mapped onto the 3D template (grip tape top, deck graphics). */
+  graphic?: string;
+}
+
 export interface Part<Cat extends string = string> {
   id: string;
   name: string;
@@ -29,6 +40,7 @@ export interface Part<Cat extends string = string> {
   /** All lengths in millimetres. */
   dimensions: Record<string, number>;
   retailers: RetailerOffer[];
+  images?: PartImages;
 }
 
 export interface CategoryDef<Cat extends string = string> {
