@@ -35,6 +35,8 @@ export interface BuilderState<Cat extends string, P extends Part<Cat>> {
   resetBuild: () => void;
   /** Issues that would exist if `partId` replaced the current part in its slot. */
   previewIssues: (partId: string) => CompatibilityIssue<Cat>[];
+  /** All colourways of a product, default first. */
+  variantsOf: (productId: string) => P[];
 }
 
 export type BuilderStore<Cat extends string, P extends Part<Cat>> = UseBoundStore<
@@ -45,6 +47,10 @@ export function createBuilderStore<Cat extends string, P extends Part<Cat>>(
   sport: SportModule<Cat, P>,
 ): BuilderStore<Cat, P> {
   const byId = new Map(sport.parts.map((p) => [p.id, p]));
+  // A product id resolves to its default (first) colourway — used by defaults and older share links.
+  for (const p of sport.parts) if (!byId.has(p.productId)) byId.set(p.productId, p);
+  const variantsOf = new Map<string, P[]>();
+  for (const p of sport.parts) variantsOf.set(p.productId, [...(variantsOf.get(p.productId) ?? []), p]);
   const order = sport.categories.map((c) => c.id);
 
   const resolve = (ids: Partial<Record<Cat, string>>): Build<Cat, P> => {
@@ -113,5 +119,6 @@ export function createBuilderStore<Cat extends string, P extends Part<Cat>>(
       const build = { ...get().build, [part.category]: part };
       return sport.checkCompatibility(build).filter((i) => i.slots.includes(part.category));
     },
+    variantsOf: (productId) => variantsOf.get(productId) ?? [],
   }));
 }

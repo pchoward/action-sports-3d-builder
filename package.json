@@ -9,7 +9,7 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "images": "node scripts/images-to-webp.mjs",
-    "catalog:sample": "node scripts/gen-sample-scooter-parts.mjs src/data/scooter-parts.json"
+    "catalog:check": "tsx scripts/check-catalog.ts"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",
@@ -30,6 +30,7 @@
     "eslint-config-next": "16.4.6",
     "sharp": "^0.35.5",
     "tailwindcss": "4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

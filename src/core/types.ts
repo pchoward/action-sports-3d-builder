@@ -7,11 +7,18 @@
 
 export type Finish = "gloss" | "matte" | "anodized" | "raw";
 
+/** A store's offer for a variant, resolved with the retailer's display name and affiliate link. */
 export interface RetailerOffer {
+  retailerId: string;
   shopName: string;
   price: number; // USD
+  /** Regular price when the offer is discounted — drives strike-through + deal badges. */
+  compareAtPrice?: number;
   inStock: boolean;
+  /** Outbound link (affiliate-wrapped when the retailer has an affiliate template). */
   affiliateUrl: string;
+  /** ISO date the price/stock was last verified (by a human or the scraper). */
+  lastChecked?: string;
   /** Surfaced from the shared ShredDeals price pipeline. */
   isShredDeal?: boolean;
 }
@@ -27,11 +34,21 @@ export interface PartImages {
   graphic?: string;
 }
 
+/**
+ * A buildable part: one colourway (variant) of a product, flattened with its
+ * product specs and resolved store offers. This is what the store, the
+ * compatibility rules and the 3D templates consume. It's derived from the catalog
+ * (see core/catalog.ts), never stored.
+ */
 export interface Part<Cat extends string = string> {
+  /** Variant id, which is what builds and share links reference. */
   id: string;
+  productId: string;
   name: string;
   brand: string;
   category: Cat;
+  /** Colourway label, e.g. "Black", "Gold/Black". */
+  colorName: string;
   weightGrams: number;
   colorHex: string;
   /** Optional accent colour, e.g. wheel urethane vs. core. */
@@ -41,6 +58,7 @@ export interface Part<Cat extends string = string> {
   dimensions: Record<string, number>;
   retailers: RetailerOffer[];
   images?: PartImages;
+  soldAs?: "each" | "pair";
 }
 
 export interface CategoryDef<Cat extends string = string> {
@@ -68,6 +86,7 @@ export interface SportModule<Cat extends string = string, P extends Part<Cat> = 
   name: string;
   categories: readonly CategoryDef<Cat>[];
   parts: readonly P[];
+  /** Product ids (→ default colourway) or variant ids. */
   defaultBuild: Partial<Record<Cat, string>>;
   checkCompatibility(build: Build<Cat, P>): CompatibilityIssue<Cat>[];
   /** Short spec chips for lists/tables (e.g. "HIC", "120mm"). */
