@@ -52,6 +52,24 @@ function Swatch({ color }: { color: string }) {
   );
 }
 
+/** Product photo (WebP) when the catalog has one, otherwise a colour swatch. */
+function Thumb({ part, size = 40 }: { part: Part; size?: number }) {
+  if (!part.images?.product) return <Swatch color={part.colorHex} />;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- catalog images are pre-optimized WebP
+    <img
+      src={part.images.product}
+      alt=""
+      width={size}
+      height={size}
+      loading="lazy"
+      decoding="async"
+      className="shrink-0 rounded-md bg-white object-contain ring-1 ring-white/10"
+      style={{ width: size, height: size }}
+    />
+  );
+}
+
 function Chips({ items }: { items: string[] }) {
   return (
     <div className="flex flex-wrap gap-1">
@@ -87,7 +105,9 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
         return;
       }
     }
-    const qs = serializeBuild(sport.id, s.selectedIds);
+    let qs = serializeBuild(sport.id, s.selectedIds);
+    const cam = new URLSearchParams(window.location.search).get("cam"); // keep viewer-only params
+    if (cam) qs += `&cam=${cam}`;
     window.history.replaceState(null, "", `${window.location.pathname}?${qs}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [s.selectedIds]);
@@ -210,7 +230,7 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                     }`}
                   >
                     <div className="flex items-start gap-3">
-                      <Swatch color={p.colorHex} />
+                      <Thumb part={p} />
                       <div className="min-w-0 flex-1">
                         <div className="flex items-start justify-between gap-2">
                           <div className="min-w-0">
@@ -315,7 +335,7 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex items-start gap-2">
-                          <Swatch color={part.colorHex} />
+                          <Thumb part={part} size={32} />
                           <div>
                             <p className="text-zinc-100">
                               <span className="text-zinc-500">{part.brand}</span> {part.name}

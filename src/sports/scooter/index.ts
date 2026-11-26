@@ -2,6 +2,7 @@ import type { SportModule } from "@/core/types";
 import catalog from "@/data/scooter-parts.json";
 import { validateScooterCatalog } from "./catalog";
 import { checkScooterCompatibility } from "./compatibility";
+import { resolveStyle } from "./style";
 import type { ScooterCategory, ScooterPart } from "./types";
 
 export const SCOOTER_CATEGORIES = [
@@ -36,7 +37,7 @@ export const scooterModule: SportModule<ScooterCategory, ScooterPart> = {
     const d = p.dimensions;
     switch (p.category) {
       case "deck":
-        return [`${d.length}×${d.width}mm`, `${c.headtubeAngle}° HT`, `≤${Math.max(...(c.wheelSize ?? []))}mm`, `${c.axle} axle`, c.headset ?? ""];
+        return [resolveStyle("deck", p.style).body, `${d.length}×${d.width}mm`, `${c.headtubeAngle}° HT`, `≤${Math.max(...(c.wheelSize ?? []))}mm`, `${c.axle} axle`, c.headset ?? ""];
       case "fork":
         return [c.compression?.join("/") ?? "", `${d.steererLength}mm steerer`, `≤${Math.max(...(c.wheelSize ?? []))}mm`, `${c.axle} axle`];
       case "headset":
@@ -44,9 +45,9 @@ export const scooterModule: SportModule<ScooterCategory, ScooterPart> = {
       case "clamp":
         return [c.compression?.[0] ?? "", `${d.height}mm tall`, `${c.barDiameter?.join("/")}mm bars`];
       case "bars":
-        return [`${d.height}H × ${d.width}W`, `${d.outerDiameter}mm OD`, c.compression?.join("/") ?? ""];
+        return [`${resolveStyle("bars", p.style).shape}-bar`, `${d.height}H × ${d.width}W`, `${d.outerDiameter}mm OD`, c.compression?.join("/") ?? ""];
       case "wheels":
-        return [`${d.diameter}mm`, c.core ?? "", `${d.width}mm wide`];
+        return [`${d.diameter}mm`, c.core ?? "", `${resolveStyle("wheels", p.style).core} core`, `${d.width}mm wide`];
       case "grips":
         return [`${d.length}mm`];
       case "griptape":

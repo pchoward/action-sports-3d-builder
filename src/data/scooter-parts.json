@@ -44,7 +44,13 @@
         "inStock": false,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Formula+Deck+5.5%22"
       }
-    ]
+    ],
+    "style": {
+      "body": "box",
+      "nose": "square",
+      "neck": "cutout",
+      "brake": "fender"
+    }
   },
   {
     "id": "deck-envy-street-50",
@@ -84,7 +90,14 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Street+Deck+5.0%22"
       }
-    ]
+    ],
+    "style": {
+      "body": "box",
+      "nose": "rounded",
+      "neck": "solid",
+      "brake": "flex",
+      "sideSlots": 3
+    }
   },
   {
     "id": "deck-ethic-park-47",
@@ -123,7 +136,13 @@
         "inStock": false,
         "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Park+Deck+4.7%22"
       }
-    ]
+    ],
+    "style": {
+      "body": "boxless",
+      "nose": "square",
+      "neck": "double",
+      "brake": "fender"
+    }
   },
   {
     "id": "deck-root-air-50",
@@ -170,7 +189,14 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+AIR+Deck+5.0%22"
       }
-    ]
+    ],
+    "style": {
+      "body": "box",
+      "nose": "rounded",
+      "neck": "cutout",
+      "brake": "flex",
+      "sideSlots": 2
+    }
   },
   {
     "id": "fork-tilt-theory",
@@ -210,7 +236,11 @@
         "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Theory+Threadless+Fork",
         "isShredDeal": true
       }
-    ]
+    ],
+    "style": {
+      "legs": "tapered",
+      "cutouts": true
+    }
   },
   {
     "id": "fork-envy-ihc",
@@ -248,7 +278,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+IHC+Fork"
       }
-    ]
+    ],
+    "style": {
+      "legs": "straight"
+    }
   },
   {
     "id": "fork-ethic-110",
@@ -286,7 +319,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Threadless+Fork+110"
       }
-    ]
+    ],
+    "style": {
+      "legs": "tapered"
+    }
   },
   {
     "id": "fork-native-threadless",
@@ -326,7 +362,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Threadless+Fork"
       }
-    ]
+    ],
+    "style": {
+      "legs": "straight",
+      "cutouts": true
+    }
   },
   {
     "id": "headset-tilt-integrated",
@@ -461,7 +501,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+SCS+Clamp"
       }
-    ]
+    ],
+    "style": {
+      "shape": "round"
+    }
   },
   {
     "id": "clamp-envy-hic",
@@ -497,7 +540,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+HIC+Double+Clamp"
       }
-    ]
+    ],
+    "style": {
+      "shape": "faceted"
+    }
   },
   {
     "id": "clamp-ethic-ihc",
@@ -533,7 +579,11 @@
         "inStock": false,
         "affiliateUrl": "https://www.thevaultproscooters.com/search?q=IHC+Clamp"
       }
-    ]
+    ],
+    "style": {
+      "shape": "round",
+      "slit": false
+    }
   },
   {
     "id": "clamp-proto-scs",
@@ -570,7 +620,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Full+SCS+Clamp"
       }
-    ]
+    ],
+    "style": {
+      "shape": "faceted"
+    }
   },
   {
     "id": "bars-tilt-classic-os",
@@ -611,7 +664,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Classic+Oversized+Bars"
       }
-    ]
+    ],
+    "style": {
+      "shape": "T",
+      "gussets": true
+    }
   },
   {
     "id": "bars-envy-std",
@@ -645,7 +702,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Standard+Bars"
       }
-    ]
+    ],
+    "style": {
+      "shape": "T",
+      "gussets": false
+    }
   },
   {
     "id": "bars-ethic-titanium",
@@ -680,7 +741,10 @@
         "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Titanium+Bars",
         "isShredDeal": true
       }
-    ]
+    ],
+    "style": {
+      "shape": "Y"
+    }
   },
   {
     "id": "bars-root-tall-os",
@@ -720,7 +784,13 @@
         "inStock": false,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Tall+Oversized+Bars"
       }
-    ]
+    ],
+    "style": {
+      "shape": "T",
+      "gussets": true,
+      "backsweep": 5,
+      "upsweep": 2
+    }
   },
   {
     "id": "grips-odi-longneck-black",
@@ -754,7 +824,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Longneck+Grips"
       }
-    ]
+    ],
+    "style": {
+      "pattern": "ribbed",
+      "flange": true
+    }
   },
   {
     "id": "grips-tilt-blue",
@@ -783,7 +857,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Pro+Grips"
       }
-    ]
+    ],
+    "style": {
+      "pattern": "diamond",
+      "flange": false
+    }
   },
   {
     "id": "grips-root-white",
@@ -811,7 +889,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+R2+Grips"
       }
-    ]
+    ],
+    "style": {
+      "pattern": "smooth",
+      "flange": true
+    }
   },
   {
     "id": "wheels-tilt-120-12std",
@@ -852,7 +934,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Stage+II+120mm+Wheels+(pair)"
       }
-    ]
+    ],
+    "style": {
+      "core": "spoked",
+      "spokes": 6
+    }
   },
   {
     "id": "wheels-envy-110-8std",
@@ -886,7 +972,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Hollow+Core+110mm+Wheels+(pair)"
       }
-    ]
+    ],
+    "style": {
+      "core": "hollow",
+      "spokes": 8
+    }
   },
   {
     "id": "wheels-root-110-12std",
@@ -921,7 +1011,11 @@
         "inStock": true,
         "affiliateUrl": "https://www.skatepro.com/en-us/search?q=AIR+110mm+Wheels+(pair)"
       }
-    ]
+    ],
+    "style": {
+      "core": "fullcore",
+      "spokes": 5
+    }
   },
   {
     "id": "wheels-native-120-12std",
@@ -955,7 +1049,12 @@
         "inStock": false,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Stalker+120mm+Wheels+(pair)"
       }
-    ]
+    ],
+    "style": {
+      "core": "spoked",
+      "spokes": 5,
+      "profile": "flat"
+    }
   },
   {
     "id": "griptape-tilt-black-6",
@@ -983,7 +1082,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Black+Grip+Tape+6%22"
       }
-    ]
+    ],
+    "style": {
+      "pattern": "plain"
+    }
   },
   {
     "id": "griptape-root-clear-5",
@@ -1012,7 +1114,10 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Clear+Grip+Tape+5%22"
       }
-    ]
+    ],
+    "style": {
+      "pattern": "logo"
+    }
   },
   {
     "id": "griptape-envy-camo-5",
@@ -1040,6 +1145,196 @@
         "inStock": true,
         "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Camo+Grip+Tape+5%22"
       }
+    ],
+    "style": {
+      "pattern": "camo",
+      "accentHex": "#7a6a45"
+    }
+  },
+  {
+    "id": "deck-proto-boxless-525",
+    "name": "Boxless Street Deck 5.25\"",
+    "brand": "Proto",
+    "category": "deck",
+    "weightGrams": 2250,
+    "colorHex": "#e8e6df",
+    "finish": "gloss",
+    "dimensions": {
+      "length": 515,
+      "width": 133,
+      "thickness": 34,
+      "headtubeLength": 117,
+      "neckHeight": 85,
+      "neckReach": 40
+    },
+    "compatibility": {
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm",
+      "headset": "integrated",
+      "headtubeAngle": 83
+    },
+    "retailers": [
+      {
+        "shopName": "The Vault Pro Scooters",
+        "price": 209.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Boxless+Street+Deck+5.25%22"
+      },
+      {
+        "shopName": "SkatePro",
+        "price": 199.95,
+        "inStock": true,
+        "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Boxless+Street+Deck+5.25%22",
+        "isShredDeal": true
+      }
+    ],
+    "style": {
+      "body": "boxless",
+      "nose": "rounded",
+      "neck": "cutout",
+      "brake": "flex"
+    }
+  },
+  {
+    "id": "bars-lucky-y-os",
+    "name": "Y-Bars Oversized",
+    "brand": "Lucky",
+    "category": "bars",
+    "weightGrams": 1180,
+    "colorHex": "#9c27b0",
+    "finish": "anodized",
+    "dimensions": {
+      "height": 600,
+      "width": 590,
+      "outerDiameter": 34.9
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ]
+    },
+    "retailers": [
+      {
+        "shopName": "The Vault Pro Scooters",
+        "price": 109.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Y-Bars+Oversized"
+      },
+      {
+        "shopName": "Broadway Pro Scooters",
+        "price": 104.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Y-Bars+Oversized"
+      }
+    ],
+    "style": {
+      "shape": "Y",
+      "backsweep": 3
+    }
+  },
+  {
+    "id": "wheels-proto-110-solid",
+    "name": "Gripper 110mm Wheels (pair)",
+    "brand": "Proto",
+    "category": "wheels",
+    "weightGrams": 740,
+    "colorHex": "#18181b",
+    "secondaryHex": "#111111",
+    "finish": "anodized",
+    "dimensions": {
+      "diameter": 110,
+      "width": 24
+    },
+    "compatibility": {
+      "wheelSize": [
+        110
+      ],
+      "core": "12STD"
+    },
+    "retailers": [
+      {
+        "shopName": "The Vault Pro Scooters",
+        "price": 69.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Gripper+110mm+Wheels+(pair)"
+      },
+      {
+        "shopName": "SkatePro",
+        "price": 66.95,
+        "inStock": true,
+        "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Gripper+110mm+Wheels+(pair)"
+      }
+    ],
+    "style": {
+      "core": "solid"
+    }
+  },
+  {
+    "id": "griptape-sample-flames-6",
+    "name": "Flames Graphic Grip Tape 6\"",
+    "brand": "Sample Print",
+    "category": "griptape",
+    "weightGrams": 62,
+    "colorHex": "#141418",
+    "finish": "matte",
+    "dimensions": {
+      "length": 584,
+      "width": 152
+    },
+    "compatibility": {},
+    "images": {
+      "graphic": "/images/graphics/shred-flames.webp"
+    },
+    "retailers": [
+      {
+        "shopName": "The Vault Pro Scooters",
+        "price": 14.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Flames+Graphic+Grip+Tape+6%22"
+      },
+      {
+        "shopName": "Broadway Pro Scooters",
+        "price": 13.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.google.com/search?q=Broadway+Pro+Scooters+Flames+Graphic+Grip+Tape+6%22"
+      }
     ]
+  },
+  {
+    "id": "griptape-tilt-stripe-6",
+    "name": "Stripe Grip Tape 6\"",
+    "brand": "Tilt",
+    "category": "griptape",
+    "weightGrams": 60,
+    "colorHex": "#16161a",
+    "finish": "matte",
+    "dimensions": {
+      "length": 584,
+      "width": 152
+    },
+    "compatibility": {},
+    "retailers": [
+      {
+        "shopName": "The Vault Pro Scooters",
+        "price": 12.99,
+        "inStock": true,
+        "affiliateUrl": "https://www.thevaultproscooters.com/search?q=Stripe+Grip+Tape+6%22"
+      },
+      {
+        "shopName": "SkatePro",
+        "price": 11.95,
+        "inStock": true,
+        "affiliateUrl": "https://www.skatepro.com/en-us/search?q=Stripe+Grip+Tape+6%22",
+        "isShredDeal": true
+      }
+    ],
+    "style": {
+      "pattern": "stripe",
+      "accentHex": "#e53935"
+    }
   }
 ]

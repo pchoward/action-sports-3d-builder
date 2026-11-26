@@ -2,7 +2,7 @@
 
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import type { MeshPhysicalMaterial } from "three";
+import type { MeshPhysicalMaterial, Side, Texture } from "three";
 import type { Finish } from "@/core/types";
 
 const FINISH: Record<
@@ -27,31 +27,39 @@ function usePulse(highlight: boolean, peak: number) {
   return ref;
 }
 
-/** PBR material driven by catalog `colorHex` + `finish`. */
-export function PartMaterial({
-  color,
-  finish,
-  highlight = false,
-}: {
+interface MaterialProps {
   color: string;
-  finish: Finish;
   highlight?: boolean;
-}) {
-  const ref = usePulse(highlight, 0.1);
-  return <meshPhysicalMaterial ref={ref} color={color} {...FINISH[finish]} emissive={HIGHLIGHT} emissiveIntensity={0} />;
+  map?: Texture | null;
+  bumpMap?: Texture | null;
+  bumpScale?: number;
+  flatShading?: boolean;
+  side?: Side;
 }
 
-export function RubberMaterial({ color, highlight = false }: { color: string; highlight?: boolean }) {
+/** PBR material driven by catalog `colorHex` + `finish`. */
+export function PartMaterial({ finish, highlight = false, ...rest }: MaterialProps & { finish: Finish }) {
+  const ref = usePulse(highlight, 0.1);
+  return <meshPhysicalMaterial ref={ref} {...FINISH[finish]} {...rest} emissive={HIGHLIGHT} emissiveIntensity={0} />;
+}
+
+/** Urethane / rubber / grip tape. */
+export function RubberMaterial({ highlight = false, roughness = 0.6, ...rest }: MaterialProps & { roughness?: number }) {
   const ref = usePulse(highlight, 0.08);
   return (
     <meshPhysicalMaterial
       ref={ref}
-      color={color}
       metalness={0}
-      roughness={0.6}
+      roughness={roughness}
       sheen={0.4}
+      {...rest}
       emissive={HIGHLIGHT}
       emissiveIntensity={0}
     />
   );
+}
+
+/** Small hardware (bolts, axles, plugs). */
+export function HardwareMaterial({ color = "#1a1a1a" }: { color?: string }) {
+  return <meshStandardMaterial color={color} metalness={1} roughness={0.28} />;
 }

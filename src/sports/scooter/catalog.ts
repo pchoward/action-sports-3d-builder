@@ -1,4 +1,6 @@
+import { validateImages } from "@/core/images";
 import type { Finish } from "@/core/types";
+import { validateStyle } from "./style";
 import { DIMENSION_KEYS, type ScooterCategory, type ScooterPart } from "./types";
 
 const FINISHES: Finish[] = ["gloss", "matte", "anodized", "raw"];
@@ -27,6 +29,8 @@ export function validateScooterCatalog(raw: unknown): ScooterPart[] {
     for (const k of DIMENSION_KEYS[p.category as ScooterCategory]) {
       if (typeof dims[k] !== "number") fail(`dimensions.${k} (mm) is required for ${p.category}`);
     }
+    for (const err of validateStyle(p.category as ScooterCategory, p.style)) fail(err);
+    for (const err of validateImages(p.images)) fail(err);
     if (!Array.isArray(p.retailers) || p.retailers.length === 0) fail("needs at least one retailer");
     return p as unknown as ScooterPart;
   });

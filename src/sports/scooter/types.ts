@@ -35,6 +35,8 @@ export interface ScooterCompatibility {
 
 export interface ScooterPart extends Part<ScooterCategory> {
   compatibility: ScooterCompatibility;
+  /** Template style options — see STYLE_SCHEMA in ./style.ts. Optional; defaults apply. */
+  style?: Record<string, string | number | boolean | null>;
 }
 
 /**

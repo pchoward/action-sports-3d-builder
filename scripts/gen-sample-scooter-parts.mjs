@@ -129,5 +129,61 @@ const parts = [
     [["vault", 10.99], ["broadway", 9.99]]),
 ];
 
+
+// ── Extra parts showing template variety ──────────────────
+parts.push(
+  part({ id: "deck-proto-boxless-525", name: "Boxless Street Deck 5.25\"", brand: "Proto", category: "deck", weightGrams: 2250, colorHex: "#e8e6df", finish: "gloss",
+    dimensions: { length: 515, width: 133, thickness: 34, headtubeLength: 117, neckHeight: 85, neckReach: 40 },
+    compatibility: { wheelSize: [110, 120], axle: "12mm", headset: "integrated", headtubeAngle: 83 } },
+    [["vault", 209.99], ["skatepro", 199.95, true, true]]),
+  part({ id: "bars-lucky-y-os", name: "Y-Bars Oversized", brand: "Lucky", category: "bars", weightGrams: 1180, colorHex: "#9c27b0", finish: "anodized",
+    dimensions: { height: 600, width: 590, outerDiameter: 34.9 }, compatibility: { compression: ["SCS", "HIC"] } },
+    [["vault", 109.99], ["broadway", 104.99]]),
+  part({ id: "wheels-proto-110-solid", name: "Gripper 110mm Wheels (pair)", brand: "Proto", category: "wheels", weightGrams: 740, colorHex: "#18181b", secondaryHex: "#111111", finish: "anodized",
+    dimensions: { diameter: 110, width: 24 }, compatibility: { wheelSize: [110], core: "12STD" } },
+    [["vault", 69.99], ["skatepro", 66.95]]),
+  part({ id: "griptape-sample-flames-6", name: "Flames Graphic Grip Tape 6\"", brand: "Sample Print", category: "griptape", weightGrams: 62, colorHex: "#141418", finish: "matte",
+    dimensions: { length: 584, width: 152 }, compatibility: {}, images: { graphic: "/images/graphics/shred-flames.webp" } },
+    [["vault", 14.99], ["broadway", 13.99]]),
+  part({ id: "griptape-tilt-stripe-6", name: "Stripe Grip Tape 6\"", brand: "Tilt", category: "griptape", weightGrams: 60, colorHex: "#16161a", finish: "matte",
+    dimensions: { length: 584, width: 152 }, compatibility: {} },
+    [["vault", 12.99], ["skatepro", 11.95, true, true]]),
+);
+
+// ── Template styles (see src/sports/scooter/style.ts) ─────
+const STYLES = {
+  "deck-tilt-formula-55": { body: "box", nose: "square", neck: "cutout", brake: "fender" },
+  "deck-envy-street-50": { body: "box", nose: "rounded", neck: "solid", brake: "flex", sideSlots: 3 },
+  "deck-ethic-park-47": { body: "boxless", nose: "square", neck: "double", brake: "fender" },
+  "deck-root-air-50": { body: "box", nose: "rounded", neck: "cutout", brake: "flex", sideSlots: 2 },
+  "deck-proto-boxless-525": { body: "boxless", nose: "rounded", neck: "cutout", brake: "flex" },
+  "fork-tilt-theory": { legs: "tapered", cutouts: true },
+  "fork-envy-ihc": { legs: "straight" },
+  "fork-ethic-110": { legs: "tapered" },
+  "fork-native-threadless": { legs: "straight", cutouts: true },
+  "clamp-tilt-scs": { shape: "round" },
+  "clamp-envy-hic": { shape: "faceted" },
+  "clamp-ethic-ihc": { shape: "round", slit: false },
+  "clamp-proto-scs": { shape: "faceted" },
+  "bars-tilt-classic-os": { shape: "T", gussets: true },
+  "bars-envy-std": { shape: "T", gussets: false },
+  "bars-ethic-titanium": { shape: "Y" },
+  "bars-root-tall-os": { shape: "T", gussets: true, backsweep: 5, upsweep: 2 },
+  "bars-lucky-y-os": { shape: "Y", backsweep: 3 },
+  "grips-odi-longneck-black": { pattern: "ribbed", flange: true },
+  "grips-tilt-blue": { pattern: "diamond", flange: false },
+  "grips-root-white": { pattern: "smooth", flange: true },
+  "wheels-tilt-120-12std": { core: "spoked", spokes: 6 },
+  "wheels-envy-110-8std": { core: "hollow", spokes: 8 },
+  "wheels-root-110-12std": { core: "fullcore", spokes: 5 },
+  "wheels-native-120-12std": { core: "spoked", spokes: 5, profile: "flat" },
+  "wheels-proto-110-solid": { core: "solid" },
+  "griptape-tilt-black-6": { pattern: "plain" },
+  "griptape-root-clear-5": { pattern: "logo" },
+  "griptape-envy-camo-5": { pattern: "camo", accentHex: "#7a6a45" },
+  "griptape-tilt-stripe-6": { pattern: "stripe", accentHex: "#e53935" },
+};
+for (const p of parts) if (STYLES[p.id]) p.style = STYLES[p.id];
+
 writeFileSync(process.argv[2], JSON.stringify(parts, null, 2) + "\n");
 console.log(`wrote ${parts.length} parts`);
