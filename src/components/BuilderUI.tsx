@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState, type ComponentType } from "react
 import { bestOffer, formatPrice, formatWeight } from "@/core/pricing";
 import type { SceneProps } from "@/core/scene";
 import { parseBuild, serializeBuild } from "@/core/share";
-import type { CompatibilityIssue, Part, SportModule } from "@/core/types";
+import type { CompatibilityIssue, Part, RetailerOffer, SportModule } from "@/core/types";
 import type { BuilderStore } from "@/store/createBuilderStore";
 
 interface BuilderUIProps<Cat extends string, P extends Part<Cat>> {
@@ -49,6 +49,18 @@ function Swatch({ color }: { color: string }) {
       style={{ background: color }}
       aria-hidden
     />
+  );
+}
+
+function Price({ offer, large = false }: { offer: RetailerOffer | undefined; large?: boolean }) {
+  if (!offer) return <p className="text-sm text-zinc-500">No offers</p>;
+  return (
+    <p className={`${large ? "" : "text-sm"} font-semibold text-white`}>
+      {offer.compareAtPrice && (
+        <span className="mr-1.5 text-[11px] font-normal text-zinc-500 line-through">{formatPrice(offer.compareAtPrice)}</span>
+      )}
+      {formatPrice(offer.price)}
+    </p>
   );
 }
 
@@ -124,7 +136,10 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
   };
 
   const activeDef = sport.categories.find((c) => c.id === s.activeCategory)!;
-  const candidates = sport.parts.filter((p) => p.category === s.activeCategory);
+  // One card per product (its default colourway); colourways are picked with swatches.
+  const candidates = sport.parts.filter(
+    (p) => p.category === s.activeCategory && s.variantsOf(p.productId)[0]?.id === p.id,
+  );
   const errors = s.issues.filter((i) => i.severity === "error");
   const warnings = s.issues.filter((i) => i.severity === "warning");
   const status = errors.length
@@ -217,18 +232,21 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
           {activeDef.hint && <p className="px-4 pb-2 text-xs text-zinc-500">{activeDef.hint}</p>}
 
           <ul className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-3 pb-3">
-            {candidates.map((p) => {
-              const selected = s.build[s.activeCategory]?.id === p.id;
+            {candidates.map((product) => {
+              const current = s.build[s.activeCategory];
+              const isThis = current?.productId === product.productId;
+              const p = isThis && current ? current : product; // the colourway being shown
+              const variants = s.variantsOf(product.productId);
               const offer = bestOffer(p);
               const preview = s.previewIssues(p.id);
               return (
-                <li key={p.id}>
-                  <button
-                    onClick={() => s.selectPart(p.category, p.id)}
-                    className={`w-full rounded-xl border p-3 text-left transition ${
-                      selected ? "border-sky-500/60 bg-sky-500/10" : "border-white/5 bg-white/[0.02] hover:border-white/20"
-                    }`}
-                  >
+                <li
+                  key={product.productId}
+                  className={`rounded-xl border transition ${
+                    isThis ? "border-sky-500/60 bg-sky-500/10" : "border-white/5 bg-white/[0.02] hover:border-white/20"
+                  }`}
+                >
+                  <button onClick={() => s.selectPart(p.category, p.id)} className="w-full p-3 pb-2 text-left">
                     <div className="flex items-start gap-3">
                       <Thumb part={p} />
                       <div className="min-w-0 flex-1">
@@ -238,8 +256,10 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                             <p className="truncate text-sm font-semibold text-zinc-100">{p.name}</p>
                           </div>
                           <div className="text-right">
-                            <p className="text-sm font-semibold text-white">{offer ? formatPrice(offer.price) : "—"}</p>
-                            <p className="text-[11px] text-zinc-500">{p.weightGrams} g</p>
+                            <Price offer={offer} />
+                            <p className="text-[11px] text-zinc-500">
+                              {p.weightGrams} g{p.soldAs === "pair" ? " / pair" : ""}
+                            </p>
                           </div>
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -253,6 +273,33 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                       </div>
                     </div>
                   </button>
+                  <div className="flex items-center gap-1.5 px-3 pb-3 pl-[52px]">
+                    {variants.map((v) => {
+                      const soldOut = v.retailers.length > 0 && v.retailers.every((r) => !r.inStock);
+                      const active = v.id === p.id;
+                      return (
+                        <button
+                          key={v.id}
+                          onClick={() => s.selectPart(v.category, v.id)}
+                          title={`${v.colorName}${soldOut ? " (out of stock)" : ""}`}
+                          aria-label={`${v.colorName}${soldOut ? ", out of stock" : ""}`}
+                          aria-pressed={isThis && active}
+                          className={`relative size-5 rounded-full ring-offset-2 ring-offset-zinc-900 transition ${
+                            active ? "ring-2 ring-sky-400" : "ring-1 ring-white/20 hover:ring-white/50"
+                          } ${soldOut ? "opacity-40" : ""}`}
+                          style={{
+                            background: v.secondaryHex
+                              ? `linear-gradient(135deg, ${v.colorHex} 50%, ${v.secondaryHex} 50%)`
+                              : v.colorHex,
+                          }}
+                        />
+                      );
+                    })}
+                    <span className="ml-1 text-[11px] text-zinc-400">
+                      {p.colorName}
+                      {variants.length > 1 && <span className="text-zinc-600"> · {variants.length} colours</span>}
+                    </span>
+                  </div>
                 </li>
               );
             })}
@@ -339,6 +386,7 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                           <div>
                             <p className="text-zinc-100">
                               <span className="text-zinc-500">{part.brand}</span> {part.name}
+                              <span className="text-zinc-400"> · {part.colorName}</span>
                             </p>
                             <div className="mt-1">
                               <Chips items={sport.specChips(part)} />
@@ -346,12 +394,15 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                           </div>
                         </div>
                       </td>
-                      <td className="whitespace-nowrap px-4 py-3 text-zinc-300">{part.weightGrams} g</td>
+                      <td className="whitespace-nowrap px-4 py-3 text-zinc-300">
+                        {part.weightGrams} g
+                        {part.soldAs === "pair" && <span className="block text-[11px] text-zinc-500">pair</span>}
+                      </td>
                       <td className="px-4 py-3">
                         <CompatBadge issues={issues} />
                       </td>
                       <td className="whitespace-nowrap px-4 py-3">
-                        <p className="font-semibold text-white">{offer ? formatPrice(offer.price) : "—"}</p>
+                        <Price offer={offer} large />
                         {offer && !offer.inStock && <p className="text-[11px] text-red-300">Out of stock everywhere</p>}
                       </td>
                       <td className="px-4 py-3">
@@ -389,14 +440,21 @@ export default function BuilderUI<Cat extends string, P extends Part<Cat>>({
                             {[...part.retailers]
                               .sort((a, b) => a.price - b.price)
                               .map((r) => (
-                                <li key={r.shopName} className="flex items-center justify-between gap-3 py-1.5 text-xs">
-                                  <span className="text-zinc-300">{r.shopName}</span>
+                                <li key={r.retailerId} className="flex items-center justify-between gap-3 py-1.5 text-xs">
+                                  <span className="text-zinc-300">
+                                    {r.shopName}
+                                    {r.lastChecked && (
+                                      <span className="ml-2 text-[10px] text-zinc-600">checked {r.lastChecked.slice(0, 10)}</span>
+                                    )}
+                                  </span>
                                   <span className="flex items-center gap-3">
                                     {r.isShredDeal && <DealBadge />}
                                     <span className={r.inStock ? "text-emerald-300" : "text-red-300"}>
                                       {r.inStock ? "In stock" : "Out of stock"}
                                     </span>
-                                    <span className="w-20 text-right font-semibold text-white">{formatPrice(r.price)}</span>
+                                    <span className="w-32 text-right">
+                                      <Price offer={r} />
+                                    </span>
                                     <a
                                       href={r.affiliateUrl}
                                       target="_blank"

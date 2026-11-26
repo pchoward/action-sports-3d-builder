@@ -1,6 +1,8 @@
 import type { SportModule } from "@/core/types";
-import catalog from "@/data/scooter-parts.json";
-import { validateScooterCatalog } from "./catalog";
+import type { Retailer } from "@/core/catalog";
+import retailers from "@/data/retailers.json";
+import products from "@/data/scooter-products.json";
+import { loadScooterCatalog } from "./catalog";
 import { checkScooterCompatibility } from "./compatibility";
 import { resolveStyle } from "./style";
 import type { ScooterCategory, ScooterPart } from "./types";
@@ -20,14 +22,14 @@ export const scooterModule: SportModule<ScooterCategory, ScooterPart> = {
   id: "scooter",
   name: "Pro Scooter",
   categories: SCOOTER_CATEGORIES,
-  parts: validateScooterCatalog(catalog),
+  parts: loadScooterCatalog(products, retailers as Retailer[]),
   defaultBuild: {
     deck: "deck-tilt-formula-55",
     fork: "fork-tilt-theory",
     headset: "headset-tilt-integrated",
     clamp: "clamp-tilt-scs",
     bars: "bars-tilt-classic-os",
-    grips: "grips-odi-longneck-black",
+    grips: "grips-odi-longneck",
     wheels: "wheels-tilt-120-12std",
     griptape: "griptape-tilt-black-6",
   },

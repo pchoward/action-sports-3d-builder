@@ -1,3 +1,4 @@
+import type { Product } from "@/core/catalog";
 import type { Part } from "@/core/types";
 
 export type ScooterCategory =
@@ -33,11 +34,18 @@ export interface ScooterCompatibility {
   barDiameter?: number[];
 }
 
-export interface ScooterPart extends Part<ScooterCategory> {
+/** Scooter-specific product fields, shared by every colourway. */
+interface ScooterSpec {
   compatibility: ScooterCompatibility;
   /** Template style options — see STYLE_SCHEMA in ./style.ts. Optional; defaults apply. */
   style?: Record<string, string | number | boolean | null>;
 }
+
+/** Catalog entry (src/data/scooter-products.json). */
+export interface ScooterProduct extends Product<ScooterCategory>, ScooterSpec {}
+
+/** One buildable colourway, flattened (see core/catalog.ts → flattenCatalog). */
+export interface ScooterPart extends Part<ScooterCategory>, ScooterSpec {}
 
 /**
  * Dimension keys per category (all mm) — documented here so data agents

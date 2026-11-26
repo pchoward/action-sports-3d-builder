@@ -1,0 +1,23 @@
+[
+  {
+    "id": "vault",
+    "name": "The Vault Pro Scooters",
+    "homepage": "https://www.thevaultproscooters.com",
+    "country": "US",
+    "affiliate": null
+  },
+  {
+    "id": "skatepro",
+    "name": "SkatePro",
+    "homepage": "https://www.skatepro.com",
+    "country": "DK",
+    "affiliate": null
+  },
+  {
+    "id": "broadway",
+    "name": "Broadway Pro Scooters",
+    "homepage": "https://www.google.com/search?q=Broadway+Pro+Scooters",
+    "country": "US",
+    "affiliate": null
+  }
+]

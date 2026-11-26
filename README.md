@@ -11,7 +11,7 @@ npm run dev        # http://localhost:3000
 npm run build      # production build + type-check
 npm run typecheck  # route typegen + tsc
 npm run images -- <files|folders> [--kind product|graphic]   # convert images to WebP
-npm run catalog:sample   # regenerate the sample catalog
+npm run catalog:check    # validate catalog JSON (products, variants, offers, retailers)
 ```
 
 ## Architecture
@@ -20,6 +20,7 @@ npm run catalog:sample   # regenerate the sample catalog
 src/
 ├─ core/                     Sport-agnostic. Knows nothing about scooters.
 │  ├─ types.ts               Part, RetailerOffer, CategoryDef, CompatibilityIssue, SportModule
+│  ├─ catalog.ts             Product → Variant → Offer model, validator, flattenCatalog()
 │  ├─ pricing.ts             bestOffer() = cheapest in-stock retailer; weight/price formatting
 │  ├─ share.ts               ?sport=…&<slot>=<partId> permalink (de)serialization
 │  └─ scene.ts               SceneProps every sport's 3D scene receives
@@ -32,12 +33,14 @@ src/
 │  └─ scooter/
 │     ├─ index.ts            scooterModule: slots, default build, spec chips
 │     ├─ types.ts            ScooterPart, compression/wheel/axle/headset enums, DIMENSION_KEYS
-│     ├─ catalog.ts          Runtime validator for catalog JSON (fails loudly on bad agent data)
+│     ├─ catalog.ts          Scooter catalog loader: shared + scooter-specific validation, flatten
 │     ├─ compatibility.ts    Deterministic rules (pure function)
 │     ├─ style.ts            Template style schema (validated, with defaults)
 │     ├─ geometry.ts         Mount-chain solver: part mm dimensions → 3D rig
 │     └─ templates/          Parametric part templates + PBR finish materials
-├─ data/scooter-parts.json   Sample catalog (29 parts × 8 slots)
+├─ data/
+│  ├─ retailers.json         Stores + affiliate link templates
+│  └─ scooter-products.json  Sample catalog (34 products, 43 colourways)
 └─ components/
    ├─ BuilderUI.tsx          Generic UI: viewport + step selector + parts-list table
    ├─ ScooterScene.tsx       Canvas, studio lighting, HDRI, ContactShadows, OrbitControls
@@ -113,22 +116,61 @@ The script prints the `/images/...webp` path to paste into the catalog.
 
 ## Catalog data
 
-Each part: `id, name, brand, category, weightGrams, colorHex, secondaryHex?, finish, dimensions (mm),
-compatibility, style?, images?, retailers[{ shopName, price, inStock, affiliateUrl, isShredDeal? }]`.
-Required dimension keys per category are listed in `src/sports/scooter/types.ts → DIMENSION_KEYS`
-and enforced at load by `catalog.ts`.
+```
+src/data/retailers.json        Retailer ─┐
+src/data/scooter-products.json Product ─< Variant ─< Offer (retailerId → Retailer)
+```
+
+| Level | Holds | Example |
+|---|---|---|
+| **Retailer** | name, homepage, country, affiliate link template | `vault` → The Vault Pro Scooters |
+| **Product** | specs shared by every colourway: brand, name, category, weight, finish, dimensions (mm), compatibility, style, images, `soldAs` (`each`/`pair`) | Tilt Formula Deck 5.5" |
+| **Variant** | one buyable colourway: `colorName`, `colorHex`, `secondaryHex?`, optional `finish`/`weightGrams`/`images` overrides | `deck-tilt-formula-55--blue` |
+| **Offer** | one store's listing of that variant: `retailerId`, `price`, `compareAtPrice?`, `inStock`, `url`, `sku?`, `lastChecked`, `isShredDeal?` | SkatePro, $189.95 (was $227.99) |
+
+```jsonc
+{
+  "id": "clamp-tilt-scs", "name": "SCS Clamp", "brand": "Tilt", "category": "clamp",
+  "weightGrams": 300, "finish": "anodized",
+  "dimensions": { "height": 62, "outerDiameter": 46, "minInsertion": 20 },
+  "compatibility": { "compression": ["SCS"], "barDiameter": [31.8, 34.9] },
+  "variants": [
+    { "id": "clamp-tilt-scs--black", "colorName": "Black", "colorHex": "#18181b",
+      "offers": [{ "retailerId": "vault", "price": 54.99, "inStock": true,
+                   "url": "https://…", "sku": "TLT-SCS-BLK", "lastChecked": "2026-11-26" }] },
+    { "id": "clamp-tilt-scs--red", "colorName": "Red", "colorHex": "#c62828", "offers": [ … ] }
+  ]
+}
+```
+
+Rules:
+- **The first variant is the default colourway.** Variant ids follow `<productId>--<colour-slug>` and must be unique.
+- Builds and share links store **variant ids**. A product id also works and resolves to the default
+  colourway, so links stay valid when colourways are added.
+- **Affiliate links come from the retailer**, not the offer. Set `affiliate.urlTemplate` in
+  `retailers.json` (e.g. `"https://network.example/click?…&url={url}"`) and every offer from that store is wrapped.
+- `compareAtPrice` (regular price) must be higher than `price`; it drives the strike-through in the UI.
+- `lastChecked` is an ISO date. `catalog:check` warns about offers older than 7 days.
+- Required `dimensions` per category: `src/sports/scooter/types.ts → DIMENSION_KEYS`.
+
+Validate any edit (hand-made, agent-generated or scraped) with:
+
+```bash
+npm run catalog:check
+```
+
+It reports every problem with the product, variant, offer and field it's in. The app runs the same validation at load time.
 
 > ⚠️ **The current catalog is sample data.** Prices, stock and URLs are placeholders. Specs are
-> plausible, not verified, and retailer links are search URLs, not affiliate links. Regenerate with
-> `npm run catalog:sample`, or replace it with output from
-> the shared ShredDeals scraper pipeline.
+> plausible, not verified, and offer URLs are store search pages. No retailer has an affiliate template yet.
 
 ## Adding a sport (Phase 2: skateboards)
 
 1. `src/sports/skateboard/{types,compatibility,geometry,index}.ts` → export a `SportModule`
    (deck/trucks/wheels/bearings/hardware/griptape/risers; rules: deck width ↔ axle width,
    wheel diameter ↔ truck height + risers for wheelbite).
-2. `src/data/skateboard-parts.json` + validator.
+2. `src/data/skateboard-products.json` (same Product → Variant → Offer shape, same retailers) + a
+   `checkProduct` for skateboard-specific fields.
 3. A `SkateboardScene.tsx` implementing `SceneProps`.
 4. Register in `src/sports/registry.ts` and add a route that renders
    `<BuilderUI sport={…} useStore={createBuilderStore(…)} Scene={…} />`.

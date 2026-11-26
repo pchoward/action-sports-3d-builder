@@ -1,0 +1,1888 @@
+[
+  {
+    "id": "deck-tilt-formula-55",
+    "name": "Formula Deck 5.5\"",
+    "brand": "Tilt",
+    "category": "deck",
+    "weightGrams": 2450,
+    "finish": "matte",
+    "dimensions": {
+      "length": 520,
+      "width": 140,
+      "thickness": 38,
+      "headtubeLength": 118,
+      "neckHeight": 86,
+      "neckReach": 42
+    },
+    "compatibility": {
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm",
+      "headset": "integrated",
+      "headtubeAngle": 83
+    },
+    "style": {
+      "body": "box",
+      "nose": "square",
+      "neck": "cutout",
+      "brake": "fender"
+    },
+    "variants": [
+      {
+        "id": "deck-tilt-formula-55--black",
+        "colorName": "Black",
+        "colorHex": "#1b1b1f",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 199.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 189.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 227.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 204.99,
+            "inStock": false,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "deck-tilt-formula-55--raw-polished",
+        "colorName": "Raw Polished",
+        "colorHex": "#c9ccd2",
+        "finish": "raw",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 209.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 199.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 214.99,
+            "inStock": false,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "deck-tilt-formula-55--blue",
+        "colorName": "Blue",
+        "colorHex": "#1f5fd9",
+        "finish": "anodized",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 199.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 189.95,
+            "inStock": false,
+            "url": "https://www.skatepro.com/en-us/search?q=Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 204.99,
+            "inStock": false,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Formula+Deck+5.5%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deck-envy-street-50",
+    "name": "Street Deck 5.0\"",
+    "brand": "Envy",
+    "category": "deck",
+    "weightGrams": 2300,
+    "finish": "raw",
+    "dimensions": {
+      "length": 510,
+      "width": 127,
+      "thickness": 36,
+      "headtubeLength": 115,
+      "neckHeight": 84,
+      "neckReach": 40
+    },
+    "compatibility": {
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "8mm",
+      "headset": "integrated",
+      "headtubeAngle": 83
+    },
+    "style": {
+      "body": "box",
+      "nose": "rounded",
+      "neck": "solid",
+      "brake": "flex",
+      "sideSlots": 3
+    },
+    "variants": [
+      {
+        "id": "deck-envy-street-50--raw",
+        "colorName": "Raw",
+        "colorHex": "#c9ccd2",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 179.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Street+Deck+5.0%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 174.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Street+Deck+5.0%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deck-ethic-park-47",
+    "name": "Park Deck 4.7\"",
+    "brand": "Ethic DTC",
+    "category": "deck",
+    "weightGrams": 2150,
+    "finish": "anodized",
+    "dimensions": {
+      "length": 495,
+      "width": 120,
+      "thickness": 35,
+      "headtubeLength": 112,
+      "neckHeight": 80,
+      "neckReach": 38
+    },
+    "compatibility": {
+      "wheelSize": [
+        110
+      ],
+      "axle": "8mm",
+      "headset": "standard",
+      "headtubeAngle": 84
+    },
+    "style": {
+      "body": "boxless",
+      "nose": "square",
+      "neck": "double",
+      "brake": "fender"
+    },
+    "variants": [
+      {
+        "id": "deck-ethic-park-47--blue",
+        "colorName": "Blue",
+        "colorHex": "#1f6fd9",
+        "offers": [
+          {
+            "retailerId": "skatepro",
+            "price": 164.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Park+Deck+4.7%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "vault",
+            "price": 169.99,
+            "inStock": false,
+            "url": "https://www.thevaultproscooters.com/search?q=Park+Deck+4.7%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deck-root-air-50",
+    "name": "AIR Deck 5.0\"",
+    "brand": "Root Industries",
+    "category": "deck",
+    "weightGrams": 2380,
+    "finish": "anodized",
+    "dimensions": {
+      "length": 500,
+      "width": 127,
+      "thickness": 38,
+      "headtubeLength": 120,
+      "neckHeight": 88,
+      "neckReach": 44
+    },
+    "compatibility": {
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm",
+      "headset": "integrated",
+      "headtubeAngle": 83
+    },
+    "style": {
+      "body": "box",
+      "nose": "rounded",
+      "neck": "cutout",
+      "brake": "flex",
+      "sideSlots": 2
+    },
+    "variants": [
+      {
+        "id": "deck-root-air-50--gold",
+        "colorName": "Gold",
+        "colorHex": "#d9a426",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 219.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=AIR+Deck+5.0%22",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 263.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 229.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=AIR+Deck+5.0%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 224.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+AIR+Deck+5.0%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fork-tilt-theory",
+    "name": "Theory Threadless Fork",
+    "brand": "Tilt",
+    "category": "fork",
+    "weightGrams": 440,
+    "finish": "anodized",
+    "dimensions": {
+      "steererLength": 165,
+      "steererDiameter": 28.6,
+      "legLength": 82
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ],
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm"
+    },
+    "style": {
+      "legs": "tapered",
+      "cutouts": true
+    },
+    "variants": [
+      {
+        "id": "fork-tilt-theory--black",
+        "colorName": "Black",
+        "colorHex": "#18181b",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 69.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Theory+Threadless+Fork",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 64.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Theory+Threadless+Fork",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 77.99,
+            "isShredDeal": true
+          }
+        ]
+      },
+      {
+        "id": "fork-tilt-theory--raw",
+        "colorName": "Raw",
+        "colorHex": "#c9ccd2",
+        "finish": "raw",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 69.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Theory+Threadless+Fork",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 64.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Theory+Threadless+Fork",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fork-envy-ihc",
+    "name": "IHC Fork",
+    "brand": "Envy",
+    "category": "fork",
+    "weightGrams": 400,
+    "finish": "raw",
+    "dimensions": {
+      "steererLength": 160,
+      "steererDiameter": 28.6,
+      "legLength": 80
+    },
+    "compatibility": {
+      "compression": [
+        "IHC"
+      ],
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "8mm"
+    },
+    "style": {
+      "legs": "straight"
+    },
+    "variants": [
+      {
+        "id": "fork-envy-ihc--chrome",
+        "colorName": "Chrome",
+        "colorHex": "#d6d8dc",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 49.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=IHC+Fork",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 47.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+IHC+Fork",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fork-ethic-110",
+    "name": "Threadless Fork 110",
+    "brand": "Ethic DTC",
+    "category": "fork",
+    "weightGrams": 380,
+    "finish": "anodized",
+    "dimensions": {
+      "steererLength": 168,
+      "steererDiameter": 28.6,
+      "legLength": 76
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ],
+      "wheelSize": [
+        110
+      ],
+      "axle": "8mm"
+    },
+    "style": {
+      "legs": "tapered"
+    },
+    "variants": [
+      {
+        "id": "fork-ethic-110--blue",
+        "colorName": "Blue",
+        "colorHex": "#1f6fd9",
+        "offers": [
+          {
+            "retailerId": "skatepro",
+            "price": 74.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Threadless+Fork+110",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "vault",
+            "price": 79.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Threadless+Fork+110",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fork-native-threadless",
+    "name": "Threadless Fork",
+    "brand": "Native",
+    "category": "fork",
+    "weightGrams": 460,
+    "finish": "anodized",
+    "dimensions": {
+      "steererLength": 172,
+      "steererDiameter": 28.6,
+      "legLength": 84
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ],
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm"
+    },
+    "style": {
+      "legs": "straight",
+      "cutouts": true
+    },
+    "variants": [
+      {
+        "id": "fork-native-threadless--red",
+        "colorName": "Red",
+        "colorHex": "#c62828",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 84.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Threadless+Fork",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 101.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 89.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Threadless+Fork",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "headset-tilt-integrated",
+    "name": "Integrated Headset",
+    "brand": "Tilt",
+    "category": "headset",
+    "weightGrams": 110,
+    "finish": "matte",
+    "dimensions": {
+      "stackTop": 10,
+      "stackBottom": 6
+    },
+    "compatibility": {
+      "headset": "integrated"
+    },
+    "variants": [
+      {
+        "id": "headset-tilt-integrated--black",
+        "colorName": "Black",
+        "colorHex": "#26262b",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 24.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Integrated+Headset",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 22.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Integrated+Headset",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "headset-native-sealed",
+    "name": "Sealed Integrated Headset",
+    "brand": "Native",
+    "category": "headset",
+    "weightGrams": 95,
+    "finish": "anodized",
+    "dimensions": {
+      "stackTop": 8,
+      "stackBottom": 5
+    },
+    "compatibility": {
+      "headset": "integrated"
+    },
+    "variants": [
+      {
+        "id": "headset-native-sealed--gold",
+        "colorName": "Gold",
+        "colorHex": "#d9a426",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 29.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Sealed+Integrated+Headset",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 35.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 31.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Sealed+Integrated+Headset",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "headset-ethic-standard",
+    "name": "Standard Headset",
+    "brand": "Ethic DTC",
+    "category": "headset",
+    "weightGrams": 140,
+    "finish": "anodized",
+    "dimensions": {
+      "stackTop": 14,
+      "stackBottom": 10
+    },
+    "compatibility": {
+      "headset": "standard"
+    },
+    "variants": [
+      {
+        "id": "headset-ethic-standard--blue",
+        "colorName": "Blue",
+        "colorHex": "#1f6fd9",
+        "offers": [
+          {
+            "retailerId": "skatepro",
+            "price": 19.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Standard+Headset",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "vault",
+            "price": 21.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Standard+Headset",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clamp-tilt-scs",
+    "name": "SCS Clamp",
+    "brand": "Tilt",
+    "category": "clamp",
+    "weightGrams": 300,
+    "finish": "anodized",
+    "dimensions": {
+      "height": 62,
+      "outerDiameter": 46,
+      "minInsertion": 20
+    },
+    "compatibility": {
+      "compression": [
+        "SCS"
+      ],
+      "barDiameter": [
+        31.8,
+        34.9
+      ]
+    },
+    "style": {
+      "shape": "round"
+    },
+    "variants": [
+      {
+        "id": "clamp-tilt-scs--black",
+        "colorName": "Black",
+        "colorHex": "#18181b",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 49.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 59.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "clamp-tilt-scs--red",
+        "colorName": "Red",
+        "colorHex": "#c62828",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 49.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "clamp-tilt-scs--gold",
+        "colorName": "Gold",
+        "colorHex": "#d9a426",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 54.99,
+            "inStock": false,
+            "url": "https://www.thevaultproscooters.com/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 49.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clamp-envy-hic",
+    "name": "HIC Double Clamp",
+    "brand": "Envy",
+    "category": "clamp",
+    "weightGrams": 170,
+    "finish": "raw",
+    "dimensions": {
+      "height": 45,
+      "outerDiameter": 42,
+      "minInsertion": 25
+    },
+    "compatibility": {
+      "compression": [
+        "HIC"
+      ],
+      "barDiameter": [
+        34.9
+      ]
+    },
+    "style": {
+      "shape": "faceted"
+    },
+    "variants": [
+      {
+        "id": "clamp-envy-hic--chrome",
+        "colorName": "Chrome",
+        "colorHex": "#d6d8dc",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 29.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=HIC+Double+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 27.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+HIC+Double+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clamp-ethic-ihc",
+    "name": "IHC Clamp",
+    "brand": "Ethic DTC",
+    "category": "clamp",
+    "weightGrams": 150,
+    "finish": "anodized",
+    "dimensions": {
+      "height": 45,
+      "outerDiameter": 38,
+      "minInsertion": 25
+    },
+    "compatibility": {
+      "compression": [
+        "IHC"
+      ],
+      "barDiameter": [
+        31.8
+      ]
+    },
+    "style": {
+      "shape": "round",
+      "slit": false
+    },
+    "variants": [
+      {
+        "id": "clamp-ethic-ihc--blue",
+        "colorName": "Blue",
+        "colorHex": "#1f6fd9",
+        "offers": [
+          {
+            "retailerId": "skatepro",
+            "price": 27.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=IHC+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "vault",
+            "price": 29.99,
+            "inStock": false,
+            "url": "https://www.thevaultproscooters.com/search?q=IHC+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clamp-proto-scs",
+    "name": "Full SCS Clamp",
+    "brand": "Proto",
+    "category": "clamp",
+    "weightGrams": 280,
+    "finish": "anodized",
+    "dimensions": {
+      "height": 60,
+      "outerDiameter": 45,
+      "minInsertion": 20
+    },
+    "compatibility": {
+      "compression": [
+        "SCS"
+      ],
+      "barDiameter": [
+        31.8,
+        34.9
+      ]
+    },
+    "style": {
+      "shape": "faceted"
+    },
+    "variants": [
+      {
+        "id": "clamp-proto-scs--red",
+        "colorName": "Red",
+        "colorHex": "#c62828",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 59.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Full+SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 57.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Full+SCS+Clamp",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bars-tilt-classic-os",
+    "name": "Classic Oversized Bars",
+    "brand": "Tilt",
+    "category": "bars",
+    "weightGrams": 1150,
+    "finish": "matte",
+    "dimensions": {
+      "height": 600,
+      "width": 580,
+      "outerDiameter": 34.9
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ]
+    },
+    "style": {
+      "shape": "T",
+      "gussets": true
+    },
+    "variants": [
+      {
+        "id": "bars-tilt-classic-os--black",
+        "colorName": "Black",
+        "colorHex": "#18181b",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 89.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 84.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 101.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 92.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "bars-tilt-classic-os--chrome",
+        "colorName": "Chrome",
+        "colorHex": "#d6d8dc",
+        "finish": "raw",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 94.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 89.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 97.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Classic+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bars-envy-std",
+    "name": "Standard Bars",
+    "brand": "Envy",
+    "category": "bars",
+    "weightGrams": 1050,
+    "finish": "raw",
+    "dimensions": {
+      "height": 560,
+      "width": 560,
+      "outerDiameter": 31.8
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "IHC"
+      ]
+    },
+    "style": {
+      "shape": "T",
+      "gussets": false
+    },
+    "variants": [
+      {
+        "id": "bars-envy-std--chrome",
+        "colorName": "Chrome",
+        "colorHex": "#d6d8dc",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 69.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Standard+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 64.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Standard+Bars",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bars-ethic-titanium",
+    "name": "Titanium Bars",
+    "brand": "Ethic DTC",
+    "category": "bars",
+    "weightGrams": 850,
+    "finish": "raw",
+    "dimensions": {
+      "height": 620,
+      "width": 600,
+      "outerDiameter": 31.8
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "IHC"
+      ]
+    },
+    "style": {
+      "shape": "Y"
+    },
+    "variants": [
+      {
+        "id": "bars-ethic-titanium--raw-titanium",
+        "colorName": "Raw Titanium",
+        "colorHex": "#b8b2a3",
+        "offers": [
+          {
+            "retailerId": "skatepro",
+            "price": 249.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Titanium+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "vault",
+            "price": 259.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Titanium+Bars",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 311.99,
+            "isShredDeal": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bars-root-tall-os",
+    "name": "Tall Oversized Bars",
+    "brand": "Root Industries",
+    "category": "bars",
+    "weightGrams": 1250,
+    "finish": "gloss",
+    "dimensions": {
+      "height": 650,
+      "width": 610,
+      "outerDiameter": 34.9
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ]
+    },
+    "style": {
+      "shape": "T",
+      "gussets": true,
+      "backsweep": 5,
+      "upsweep": 2
+    },
+    "variants": [
+      {
+        "id": "bars-root-tall-os--green",
+        "colorName": "Green",
+        "colorHex": "#2e7d32",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 99.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Tall+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 104.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Tall+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 99.99,
+            "inStock": false,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Tall+Oversized+Bars",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grips-odi-longneck",
+    "name": "Longneck Grips",
+    "brand": "ODI",
+    "category": "grips",
+    "weightGrams": 120,
+    "finish": "matte",
+    "dimensions": {
+      "length": 160,
+      "outerDiameter": 31
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "ribbed",
+      "flange": true
+    },
+    "variants": [
+      {
+        "id": "grips-odi-longneck--black",
+        "colorName": "Black",
+        "colorHex": "#111113",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 11.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "grips-odi-longneck--white",
+        "colorName": "White",
+        "colorHex": "#f2f2ee",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 11.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "grips-odi-longneck--red",
+        "colorName": "Red",
+        "colorHex": "#c62828",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 11.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Longneck+Grips",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grips-tilt-blue",
+    "name": "Pro Grips",
+    "brand": "Tilt",
+    "category": "grips",
+    "weightGrams": 110,
+    "finish": "matte",
+    "dimensions": {
+      "length": 150,
+      "outerDiameter": 30
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "diamond",
+      "flange": false
+    },
+    "variants": [
+      {
+        "id": "grips-tilt-blue--blue",
+        "colorName": "Blue",
+        "colorHex": "#1e88e5",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 9.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Pro+Grips",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 11.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 10.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Pro+Grips",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grips-root-white",
+    "name": "R2 Grips",
+    "brand": "Root Industries",
+    "category": "grips",
+    "weightGrams": 115,
+    "finish": "matte",
+    "dimensions": {
+      "length": 165,
+      "outerDiameter": 32
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "smooth",
+      "flange": true
+    },
+    "variants": [
+      {
+        "id": "grips-root-white--white",
+        "colorName": "White",
+        "colorHex": "#f2f2ee",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 13.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=R2+Grips",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 12.49,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+R2+Grips",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wheels-tilt-120-12std",
+    "name": "Stage II 120mm Wheels",
+    "brand": "Tilt",
+    "category": "wheels",
+    "weightGrams": 780,
+    "finish": "anodized",
+    "dimensions": {
+      "diameter": 120,
+      "width": 26
+    },
+    "compatibility": {
+      "wheelSize": [
+        120
+      ],
+      "core": "12STD"
+    },
+    "style": {
+      "core": "spoked",
+      "spokes": 6
+    },
+    "soldAs": "pair",
+    "variants": [
+      {
+        "id": "wheels-tilt-120-12std--black",
+        "colorName": "Black",
+        "colorHex": "#2a2a2e",
+        "secondaryHex": "#f4f4f0",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 89.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 84.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 101.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 89.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      },
+      {
+        "id": "wheels-tilt-120-12std--gold-black",
+        "colorName": "Gold/Black",
+        "colorHex": "#d9a426",
+        "secondaryHex": "#141416",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 94.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 89.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 94.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Stage+II+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wheels-envy-110-8std",
+    "name": "Hollow Core 110mm Wheels",
+    "brand": "Envy",
+    "category": "wheels",
+    "weightGrams": 680,
+    "finish": "raw",
+    "dimensions": {
+      "diameter": 110,
+      "width": 24
+    },
+    "compatibility": {
+      "wheelSize": [
+        110
+      ],
+      "core": "8STD"
+    },
+    "style": {
+      "core": "hollow",
+      "spokes": 8
+    },
+    "soldAs": "pair",
+    "variants": [
+      {
+        "id": "wheels-envy-110-8std--chrome",
+        "colorName": "Chrome",
+        "colorHex": "#d6d8dc",
+        "secondaryHex": "#141416",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 59.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Hollow+Core+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 54.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Hollow+Core+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wheels-root-110-12std",
+    "name": "AIR 110mm Wheels",
+    "brand": "Root Industries",
+    "category": "wheels",
+    "weightGrams": 720,
+    "finish": "anodized",
+    "dimensions": {
+      "diameter": 110,
+      "width": 26
+    },
+    "compatibility": {
+      "wheelSize": [
+        110
+      ],
+      "core": "12STD"
+    },
+    "style": {
+      "core": "fullcore",
+      "spokes": 5
+    },
+    "soldAs": "pair",
+    "variants": [
+      {
+        "id": "wheels-root-110-12std--gold",
+        "colorName": "Gold",
+        "colorHex": "#d9a426",
+        "secondaryHex": "#1b1b1f",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 79.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=AIR+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 95.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 82.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=AIR+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wheels-native-120-12std",
+    "name": "Stalker 120mm Wheels",
+    "brand": "Native",
+    "category": "wheels",
+    "weightGrams": 800,
+    "finish": "anodized",
+    "dimensions": {
+      "diameter": 120,
+      "width": 26
+    },
+    "compatibility": {
+      "wheelSize": [
+        120
+      ],
+      "core": "12STD"
+    },
+    "style": {
+      "core": "spoked",
+      "spokes": 5,
+      "profile": "flat"
+    },
+    "soldAs": "pair",
+    "variants": [
+      {
+        "id": "wheels-native-120-12std--red",
+        "colorName": "Red",
+        "colorHex": "#c62828",
+        "secondaryHex": "#f4f4f0",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 94.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Stalker+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 92.99,
+            "inStock": false,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Stalker+120mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "griptape-tilt-black-6",
+    "name": "Black Grip Tape 6\"",
+    "brand": "Tilt",
+    "category": "griptape",
+    "weightGrams": 60,
+    "finish": "matte",
+    "dimensions": {
+      "length": 584,
+      "width": 152
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "plain"
+    },
+    "variants": [
+      {
+        "id": "griptape-tilt-black-6--black",
+        "colorName": "Black",
+        "colorHex": "#141416",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 9.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Black+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 8.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Black+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "griptape-root-clear-5",
+    "name": "Clear Grip Tape 5\"",
+    "brand": "Root Industries",
+    "category": "griptape",
+    "weightGrams": 50,
+    "finish": "matte",
+    "dimensions": {
+      "length": 560,
+      "width": 127
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "logo"
+    },
+    "variants": [
+      {
+        "id": "griptape-root-clear-5--clear",
+        "colorName": "Clear",
+        "colorHex": "#3a3d44",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 11.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Clear+Grip+Tape+5%22",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 14.99,
+            "isShredDeal": true
+          },
+          {
+            "retailerId": "broadway",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Clear+Grip+Tape+5%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "griptape-envy-camo-5",
+    "name": "Camo Grip Tape 5\"",
+    "brand": "Envy",
+    "category": "griptape",
+    "weightGrams": 55,
+    "finish": "matte",
+    "dimensions": {
+      "length": 560,
+      "width": 127
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "camo",
+      "accentHex": "#7a6a45"
+    },
+    "variants": [
+      {
+        "id": "griptape-envy-camo-5--camo",
+        "colorName": "Camo",
+        "colorHex": "#4b5a3a",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 10.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Camo+Grip+Tape+5%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 9.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Camo+Grip+Tape+5%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deck-proto-boxless-525",
+    "name": "Boxless Street Deck 5.25\"",
+    "brand": "Proto",
+    "category": "deck",
+    "weightGrams": 2250,
+    "finish": "gloss",
+    "dimensions": {
+      "length": 515,
+      "width": 133,
+      "thickness": 34,
+      "headtubeLength": 117,
+      "neckHeight": 85,
+      "neckReach": 40
+    },
+    "compatibility": {
+      "wheelSize": [
+        110,
+        120
+      ],
+      "axle": "12mm",
+      "headset": "integrated",
+      "headtubeAngle": 83
+    },
+    "style": {
+      "body": "boxless",
+      "nose": "rounded",
+      "neck": "cutout",
+      "brake": "flex"
+    },
+    "variants": [
+      {
+        "id": "deck-proto-boxless-525--white",
+        "colorName": "White",
+        "colorHex": "#e8e6df",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 209.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Boxless+Street+Deck+5.25%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 199.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Boxless+Street+Deck+5.25%22",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 239.99,
+            "isShredDeal": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bars-lucky-y-os",
+    "name": "Y-Bars Oversized",
+    "brand": "Lucky",
+    "category": "bars",
+    "weightGrams": 1180,
+    "finish": "anodized",
+    "dimensions": {
+      "height": 600,
+      "width": 590,
+      "outerDiameter": 34.9
+    },
+    "compatibility": {
+      "compression": [
+        "SCS",
+        "HIC"
+      ]
+    },
+    "style": {
+      "shape": "Y",
+      "backsweep": 3
+    },
+    "variants": [
+      {
+        "id": "bars-lucky-y-os--purple",
+        "colorName": "Purple",
+        "colorHex": "#9c27b0",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 109.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Y-Bars+Oversized",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 104.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Y-Bars+Oversized",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wheels-proto-110-solid",
+    "name": "Gripper 110mm Wheels",
+    "brand": "Proto",
+    "category": "wheels",
+    "weightGrams": 740,
+    "finish": "anodized",
+    "dimensions": {
+      "diameter": 110,
+      "width": 24
+    },
+    "compatibility": {
+      "wheelSize": [
+        110
+      ],
+      "core": "12STD"
+    },
+    "style": {
+      "core": "solid"
+    },
+    "soldAs": "pair",
+    "variants": [
+      {
+        "id": "wheels-proto-110-solid--black",
+        "colorName": "Black",
+        "colorHex": "#18181b",
+        "secondaryHex": "#111111",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 69.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Gripper+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 66.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Gripper+110mm+Wheels+(pair)",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "griptape-sample-flames-6",
+    "name": "Flames Graphic Grip Tape 6\"",
+    "brand": "Sample Print",
+    "category": "griptape",
+    "weightGrams": 62,
+    "finish": "matte",
+    "dimensions": {
+      "length": 584,
+      "width": 152
+    },
+    "compatibility": {},
+    "images": {
+      "graphic": "/images/graphics/shred-flames.webp"
+    },
+    "variants": [
+      {
+        "id": "griptape-sample-flames-6--black",
+        "colorName": "Black",
+        "colorHex": "#141418",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 14.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Flames+Graphic+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "broadway",
+            "price": 13.99,
+            "inStock": true,
+            "url": "https://www.google.com/search?q=Broadway+Pro+Scooters+Flames+Graphic+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "griptape-tilt-stripe-6",
+    "name": "Stripe Grip Tape 6\"",
+    "brand": "Tilt",
+    "category": "griptape",
+    "weightGrams": 60,
+    "finish": "matte",
+    "dimensions": {
+      "length": 584,
+      "width": 152
+    },
+    "compatibility": {},
+    "style": {
+      "pattern": "stripe",
+      "accentHex": "#e53935"
+    },
+    "variants": [
+      {
+        "id": "griptape-tilt-stripe-6--black",
+        "colorName": "Black",
+        "colorHex": "#16161a",
+        "offers": [
+          {
+            "retailerId": "vault",
+            "price": 12.99,
+            "inStock": true,
+            "url": "https://www.thevaultproscooters.com/search?q=Stripe+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26"
+          },
+          {
+            "retailerId": "skatepro",
+            "price": 11.95,
+            "inStock": true,
+            "url": "https://www.skatepro.com/en-us/search?q=Stripe+Grip+Tape+6%22",
+            "lastChecked": "2026-11-26",
+            "compareAtPrice": 14.99,
+            "isShredDeal": true
+          }
+        ]
+      }
+    ]
+  }
+]
